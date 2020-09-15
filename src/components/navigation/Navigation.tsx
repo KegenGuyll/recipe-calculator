@@ -23,6 +23,8 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import clsx from 'clsx';
+import { AccountCircle } from '@material-ui/icons';
+import LoginMenu from './LoginMenu';
 
 const drawerWidth = 240;
 
@@ -84,6 +86,9 @@ const useStyles = makeStyles((theme: Theme) =>
       }),
       marginLeft: 0,
     },
+    title: {
+      flexGrow: 1,
+    },
   })
 );
 
@@ -119,9 +124,10 @@ const Navigation: FunctionComponent = ({ children }) => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant='h6' noWrap>
+          <Typography className={classes.title} variant='h6' noWrap>
             Recipe Calculator
           </Typography>
+          <LoginMenu />
         </Toolbar>
       </AppBar>
       <Drawer
