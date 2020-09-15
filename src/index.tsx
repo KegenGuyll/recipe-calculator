@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import Palette from './theme/Palette';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Palette>
+      <App />
+    </Palette>
   </React.StrictMode>,
   document.getElementById('root')
 );
